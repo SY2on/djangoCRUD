@@ -6,7 +6,7 @@ from Blog import views
 urlpatterns = [
     path('', views.index, name = 'page-list'),
     path('create/', views.create, name = 'page-create'),
-    path('detail/', views.detail, name = 'page-detail'),
-    path('delete/', views.delete, name = 'page-delete'),
-    path('update/', views.update, name = 'page-update')
+    path('detail/<int:page_id>', views.detail, name = 'page-detail'),
+    path('delete/<int:page_id>', views.delete, name = 'page-delete'),
+    path('update/<int:page_id>', views.update, name = 'page-update')
 ]
